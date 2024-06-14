@@ -1,0 +1,186 @@
+/**Retira as bordas da página**/
+*{
+    margin: 0; 
+    padding: 0;
+    margin:0px;      
+}
+
+body{
+    display: flex;
+    flex-direction: column; 
+}
+
+/**Barra NAV**/
+
+.cabecalho {
+    background-color: #b20000;
+    height: 100px;
+    justify-content: space-between;
+    display: flex;
+    padding: 1px;
+    align-items: center;  
+}
+
+.fateclogo {
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 2%;
+}
+
+.botaologin {
+    cursor: pointer;
+    margin-right: 4%;
+    height: 55px;
+    width: 120px;
+    background-color: #003748;
+    color: white;
+    border-bottom-left-radius: 4px; 
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-around;
+    background-color: #d6d6d6;
+    align-items: center;
+    padding: 12px;
+    max-width: 100%;
+}
+
+.letrasnav { 
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+
+/**Footer*/
+footer {
+    display: flex;
+    height: auto;
+    background-color: black;
+    max-width: 100%;
+}
+
+.fieldsetfooter {
+    border: none;
+    height: 65%;
+    width: 60%;
+    margin-top: 23px;
+    margin-left: 15px;
+}
+
+.itensfooter{  
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    list-style: none;
+    margin-left: 15%;
+}
+
+#linksrapidostitulo {
+    color: white;
+    font-size: 12px;
+}
+
+.linksrapidos li {  
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.linksrapidos li:hover {
+    color: #b20000; 
+}
+
+.contatos {
+    color: white;
+    font-size: 12px;
+    list-style: none;
+    width: 50%;
+    height: 50%;
+    margin-left: 26%;
+
+}
+
+.endereco {
+    color: white;
+    font-size: 12px;
+    list-style: none;
+    width: 50%;
+    height: 50%;
+}
+
+.textcopy {
+    text-decoration: none;
+    display: inline-block;
+    font-size: larger;
+    
+}
+
+.titulofooter {
+    margin:0px;
+}
+
+.fateclogofooter {
+    margin-top: 2%;
+    height: 100px;
+    width: auto;
+    margin-left: 3%;
+}
+
+
+
+
+
+
+.fieldsetfooter a {
+    text-decoration: none;
+}
+
+.linkcontato {
+    margin-top: 15px;
+    display: flex;
+    margin-left: 15%;
+  
+}
+
+
+
+.endereco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.mapafooter {
+    border: none;
+    height: 70%;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+a:hover {
+    color:#b20000;
+}
+
+/*Barra Copyright*/
+
+.copyrightbar {
+    padding: 5px;    
+    display: flex;
+    background-color: #b20000;
+    height: 30px;  
+    align-items: center;
+    justify-content: center;
+
+}
+
