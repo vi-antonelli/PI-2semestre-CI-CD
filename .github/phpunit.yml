@@ -17,7 +17,7 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.0'  # Atualize para a versão 8.2
+        php-version: '8.1'  # Atualize para a versão 8.2
         extensions: mbstring, xml, pdo_mysql
         ini-values: post_max_size=256M, upload_max_filesize=256M, date.timezone=UTC
         coverage: xdebug
@@ -27,4 +27,4 @@ jobs:
       run: chmod +x vendor/bin/phpunit
       
     - name: Run PHPUnit
-      run: vendor/bin/phpunit tests/UsuarioTest.php
+      run: vendor/bin/phpunit testes/UsuarioTest.php
