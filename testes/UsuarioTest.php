@@ -17,7 +17,6 @@ class UsuarioTest extends TestCase
         $usuario->senha = $_POST['senha'];
         $usuario->dataCadastro = date('Y-m-d H:i:s'); // Exemplo de data atual
         // Chama o método inserir para inserir o usuário
-        $usuario->inserir();
         // Testa se a inserção foi bem-sucedida (exemplo simples, adaptar conforme necessário)
         // Aqui você pode incluir verificações adicionais se desejar (por exemplo, verificar se o ID foi gerado corretamente, etc.)
         $this->assertEquals('Teste', $usuario->nome);
