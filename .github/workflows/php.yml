@@ -27,7 +27,7 @@ jobs:
       run: chmod +x vendor/bin/phpunit
 
     - name: Run PHPUnit
-      run: vendor/bin/phpunit testes/SomaTest.php
+      run: vendor/bin/phpunit testes/somatest.php
 
     - name: Deploy to Production
       if: success()  # Executa o deploy apenas se os testes passarem com sucesso
