@@ -1,4 +1,4 @@
-name: Run PHPUnit Tests
+name: Run PHPUnit Tests and Deploy
 
 on:
   push:
@@ -9,9 +9,6 @@ on:
 jobs:
   phpunit:
     runs-on: ubuntu-latest
-deploy:
-    needs: build
-    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -20,7 +17,7 @@ deploy:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'  # Atualize para a versão 8.2
+        php-version: '8.1'  # Atualize para a versão desejada
         extensions: mbstring, xml, pdo_mysql
         ini-values: post_max_size=256M, upload_max_filesize=256M, date.timezone=UTC
         coverage: xdebug
@@ -28,11 +25,12 @@ deploy:
 
     - name: Set execute permissions for PHPUnit
       run: chmod +x vendor/bin/phpunit
-      
-    - name: Run PHPUnit
-      run: vendor/bin/phpunit testes/somatest.php
 
-      - name: Deploy to Production
+    - name: Run PHPUnit
+      run: vendor/bin/phpunit testes/SomaTest.php
+
+    - name: Deploy to Production
+      if: success()  # Executa o deploy apenas se os testes passarem com sucesso
       run: |
         echo "Deploying..."
         echo "Creating deployment log..."
