@@ -1,14 +1,10 @@
 <?php
-   
    require_once "classes/Pergunta.php";
    require_once "classes/Categoria.php";
     $pergunta=new Pergunta();
     $lista=$pergunta->listar();
     $categoria=new Categoria();
     $listaCategoria=$categoria->listar();
-
-
-
     // echo "<pre>";
     // var_dump($lista);
     // echo "</pre>";
