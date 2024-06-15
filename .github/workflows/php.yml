@@ -28,3 +28,14 @@ jobs:
       
     - name: Run PHPUnit
       run: vendor/bin/phpunit testes/somatest.php
+
+      - name: Deploy to Production
+      run: |
+        echo "Deploying..."
+        echo "Creating deployment log..."
+        echo "Deployment completed successfully."
+        echo "---------------------------------------------"
+        echo "Deployment details:"
+        echo "Date: $(date)"
+        echo "Commit: $GITHUB_SHA"
+        echo "By: $GITHUB_ACTOR"
